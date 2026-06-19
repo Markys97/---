@@ -1,419 +1,698 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Паяльная лавка — ремонт электроники и бытовой техники в Санкт-Петербурге</title>
-  <script>document.documentElement.classList.add('js');</script>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body class="page" id="top">
-
-  <!-- ===== HEADER ===== -->
-  <header class="site-header">
-    <div class="site-header__inner">
-      <a href="#top" class="site-header__logo">
-        <img src="assets/images/logo.png" alt="Паяльная лавка" class="site-header__logo-img">
-        <div class="site-header__brand">
-          <span class="site-header__brand-title">ПАЯЛЬНАЯ ЛАВКА</span>
-          <span class="site-header__brand-sub">ПИТЕР</span>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Паяльная лавка — ремонт электроники и бытовой техники в Санкт-Петербурге
+    </title>
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="page" id="top">
+    <!-- ===== HEADER ===== -->
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a href="#top" class="site-header__logo">
+          <img
+            src="assets/images/logo.png"
+            alt="Паяльная лавка"
+            class="site-header__logo-img"
+          />
+          <div class="site-header__brand">
+            <span class="site-header__brand-title">ПАЯЛЬНАЯ ЛАВКА</span>
+            <span class="site-header__brand-sub">ПИТЕР</span>
+          </div>
+        </a>
+        <nav class="site-header__nav">
+          <a href="#services" class="site-header__nav-link">Услуги</a>
+          <a href="#process" class="site-header__nav-link">Как мы работаем</a>
+          <a href="#why" class="site-header__nav-link">Почему мы</a>
+          <a href="#contacts" class="site-header__nav-link">Контакты</a>
+        </nav>
+        <div class="site-header__actions">
+          <a href="tel:+79650684874" class="site-header__phone"
+            >+7 (965) 068-48-74</a
+          >
+          <button
+            type="button"
+            class="site-header__burger"
+            id="burgerBtn"
+            aria-label="Открыть меню"
+          >
+            <span class="site-header__burger-line"></span>
+            <span class="site-header__burger-line"></span>
+            <span class="site-header__burger-line"></span>
+          </button>
         </div>
-      </a>
-      <nav class="site-header__nav">
-        <a href="#services" class="site-header__nav-link">Услуги</a>
-        <a href="#process" class="site-header__nav-link">Как мы работаем</a>
-        <a href="#why" class="site-header__nav-link">Почему мы</a>
-        <a href="#contacts" class="site-header__nav-link">Контакты</a>
-      </nav>
-      <div class="site-header__actions">
-        <a href="tel:+79650684874" class="site-header__phone">+7 (965) 068-48-74</a>
-        <button type="button" class="site-header__burger" id="burgerBtn" aria-label="Открыть меню">
-          <span class="site-header__burger-line"></span>
-          <span class="site-header__burger-line"></span>
-          <span class="site-header__burger-line"></span>
+      </div>
+    </header>
+
+    <!-- ===== MOBILE MENU ===== -->
+    <div class="mobile-menu__backdrop" id="menuBackdrop"></div>
+    <aside class="mobile-menu__panel" id="menuPanel">
+      <div class="mobile-menu__top">
+        <span class="mobile-menu__title">МЕНЮ</span>
+        <button
+          type="button"
+          class="mobile-menu__close"
+          id="menuCloseBtn"
+          aria-label="Закрыть меню"
+        >
+          ✕
         </button>
       </div>
-    </div>
-  </header>
-
-  <!-- ===== MOBILE MENU ===== -->
-  <div class="mobile-menu__backdrop" id="menuBackdrop"></div>
-  <aside class="mobile-menu__panel" id="menuPanel">
-    <div class="mobile-menu__top">
-      <span class="mobile-menu__title">МЕНЮ</span>
-      <button type="button" class="mobile-menu__close" id="menuCloseBtn" aria-label="Закрыть меню">✕</button>
-    </div>
-    <a href="#services" class="mobile-menu__link" data-menu-link>Услуги</a>
-    <a href="#process" class="mobile-menu__link" data-menu-link>Как мы работаем</a>
-    <a href="#why" class="mobile-menu__link" data-menu-link>Почему мы</a>
-    <a href="#contacts" class="mobile-menu__link" data-menu-link>Контакты</a>
-    <a href="tel:+79650684874" class="mobile-menu__cta">Позвонить в лавку</a>
-    <div class="mobile-menu__info">ул. Зенитчиков, 3к2<br>Ежедневно, 11:00–20:00</div>
-  </aside>
-
-  <!-- ===== HERO ===== -->
-  <section class="hero">
-    <div class="hero__bg"></div>
-    <div class="hero__inner container">
-      <div>
-        <div class="hero__badge">
-          <span class="hero__badge-dot"></span>
-          Санкт-Петербург · 11:00–20:00
-        </div>
-        <h1 class="hero__title">Ремонт электронных блоков управления и бытовой техники</h1>
-        <p class="hero__text">Наш профиль — ремонт плат и электронных блоков управления. Беремся за крупную и мелкую бытовую технику и возвращаем к жизни то, что другие предлагают выбросить. Бесплатная диагностика при ремонте, гарантия до 2 лет.</p>
-        <div class="hero__actions">
-          <a href="tel:+79650684874" class="hero__btn hero__btn--primary">Позвонить в лавку</a>
-          <a href="https://yandex.ru/maps/org/payalnaya_lavka/160423629659/" target="_blank" rel="noopener" class="hero__btn hero__btn--secondary">Как добраться →</a>
-        </div>
+      <a href="#services" class="mobile-menu__link" data-menu-link>Услуги</a>
+      <a href="#process" class="mobile-menu__link" data-menu-link
+        >Как мы работаем</a
+      >
+      <a href="#why" class="mobile-menu__link" data-menu-link>Почему мы</a>
+      <a href="#contacts" class="mobile-menu__link" data-menu-link>Контакты</a>
+      <a href="tel:+79650684874" class="mobile-menu__cta">Позвонить в лавку</a>
+      <div class="mobile-menu__info">
+        ул. Зенитчиков, 3к2<br />Ежедневно, 11:00–20:00
       </div>
-      <div class="hero__visual">
-        <div class="hero__visual-glow"></div>
-        <img src="assets/images/logo.png" alt="Паяльная лавка — Питер" class="hero__visual-img">
-      </div>
-    </div>
+    </aside>
 
-    <!-- quick facts strip -->
-    <div class="hero__facts container">
-      <div class="hero__facts-grid">
-        <div class="hero__fact">
-          <div class="hero__fact-value">Электроника</div>
-          <div class="hero__fact-label">основной профиль — платы управления</div>
-        </div>
-        <div class="hero__fact">
-          <div class="hero__fact-value">Крупная и мелкая</div>
-          <div class="hero__fact-label">вся бытовая техника</div>
-        </div>
-        <div class="hero__fact">
-          <div class="hero__fact-value">11:00–20:00</div>
-          <div class="hero__fact-label">режим работы лавки</div>
-        </div>
-        <div class="hero__fact">
-          <div class="hero__fact-value hero__fact-value--accent">Зенитчиков, 3к2</div>
-          <div class="hero__fact-label">мастерская в Санкт-Петербурге</div>
-        </div>
-      </div>
-    </div>
-    <div class="hero__spacer"></div>
-  </section>
-
-  <!-- ===== SERVICES ===== -->
-  <section id="services" class="section">
-    <div class="container">
-      <div class="section__eyebrow">Что мы чиним</div>
-      <h2 class="section__title section__title--tight services__title" data-reveal>От платы управления до целого холодильника</h2>
-
-      <!-- featured: electronics -->
-      <div class="services__featured" data-reveal>
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="hero__bg"></div>
+      <div class="hero__inner container">
         <div>
-          <div class="services__featured-badge">★ Основной профиль</div>
-          <h3 class="services__featured-title">Электронные блоки управления</h3>
-          <p class="services__featured-text">Диагностика и ремонт плат и модулей управления на компонентном уровне: стиральные и посудомоечные машины, холодильники, кондиционеры, кофемашины, парогенераторы и другая техника. Чиним саму плату, а не меняем блок целиком — это дешевле для вас.</p>
+          <div class="hero__badge">
+            <span class="hero__badge-dot"></span>
+            Санкт-Петербург · 11:00–20:00
+          </div>
+          <h1 class="hero__title">
+            Ремонт электронных блоков управления и бытовой техники
+          </h1>
+          <p class="hero__text">
+            Наш профиль — ремонт плат и электронных блоков управления. Беремся
+            за крупную и мелкую бытовую технику и возвращаем к жизни то, что
+            другие предлагают выбросить. Бесплатная диагностика при ремонте,
+            гарантия до 2 лет.
+          </p>
+          <div class="hero__actions">
+            <a href="tel:+79650684874" class="hero__btn hero__btn--primary"
+              >Позвонить в лавку</a
+            >
+            <a
+              href="https://yandex.ru/maps/org/payalnaya_lavka/160423629659/"
+              target="_blank"
+              rel="noopener"
+              class="hero__btn hero__btn--secondary"
+              >Как добраться →</a
+            >
+          </div>
         </div>
-        <div class="services__tags">
-          <span class="services__tag">Платы управления</span>
-          <span class="services__tag">Силовые модули</span>
-          <span class="services__tag">Микросхемы</span>
-          <span class="services__tag">Датчики и проводка</span>
-          <span class="services__tag">Дисплеи управления</span>
+        <div class="hero__visual">
+          <div class="hero__visual-glow"></div>
+          <img
+            src="assets/images/logo.png"
+            alt="Паяльная лавка — Питер"
+            class="hero__visual-img"
+          />
         </div>
       </div>
 
-      <!-- two categories -->
-      <div class="services__grid" data-reveal-group>
-        <div class="services__card">
-          <h3 class="services__card-title">Крупная бытовая техника</h3>
-          <div class="services__chips">
-            <span class="services__chip">Стиральные машины</span>
-            <span class="services__chip">Посудомоечные машины</span>
-            <span class="services__chip">Сушильные машины</span>
-            <span class="services__chip">Холодильники</span>
-            <span class="services__chip">Кондиционеры</span>
-            <span class="services__chip">Кофемашины</span>
-            <span class="services__chip">Парогенераторы</span>
-            <span class="services__chip">Гладильные системы</span>
-            <span class="services__chip">Откатные ворота</span>
-          </div>
-        </div>
-        <div class="services__card">
-          <h3 class="services__card-title">Мелкая бытовая техника</h3>
-          <div class="services__chips">
-            <span class="services__chip">Чайники</span>
-            <span class="services__chip">Тостеры</span>
-            <span class="services__chip">Блендеры и миксеры</span>
-            <span class="services__chip">Микроволновки</span>
-            <span class="services__chip">Утюги</span>
-            <span class="services__chip">Фены</span>
-            <span class="services__chip">Мясорубки</span>
-            <span class="services__chip">Кухонные комбайны</span>
-            <span class="services__chip">и другое</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== PROCESS ===== -->
-  <section id="process" class="section section--alt">
-    <div class="container">
-      <div class="section__eyebrow">Как мы работаем</div>
-      <h2 class="section__title" data-reveal>Четыре простых шага</h2>
-      <div class="process__grid" data-reveal-group>
-        <div class="process__step">
-          <div class="process__step-number">01</div>
-          <h3 class="process__step-title">Приём техники</h3>
-          <p class="process__step-text">Приносите технику или плату в лавку. Можно позвонить и описать поломку заранее.</p>
-        </div>
-        <div class="process__step">
-          <div class="process__step-number">02</div>
-          <h3 class="process__step-title">Диагностика</h3>
-          <p class="process__step-text">Находим причину неисправности и сообщаем стоимость и срок ремонта до начала работ.</p>
-        </div>
-        <div class="process__step">
-          <div class="process__step-number">03</div>
-          <h3 class="process__step-title">Ремонт</h3>
-          <p class="process__step-text">Восстанавливаем плату или узел: пайка, замена компонентов, проверка под нагрузкой.</p>
-        </div>
-        <div class="process__step">
-          <div class="process__step-number">04</div>
-          <h3 class="process__step-title">Выдача и гарантия</h3>
-          <p class="process__step-text">Отдаём рабочую технику и даём гарантию на выполненные работы — до 2 лет.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== WHY US ===== -->
-  <section id="why" class="section">
-    <div class="container why__inner">
-      <div>
-        <div class="section__eyebrow">Почему выбирают лавку</div>
-        <h2 class="section__title section__title--tight why__title" data-reveal>Чиним по-честному, на уровне платы</h2>
-        <div class="why__grid" data-reveal-group>
-          <div class="why__item">
-            <div class="why__icon">✓</div>
-            <h3 class="why__item-title">Ремонт платы, а не замена</h3>
-            <p class="why__item-text">Восстанавливаем сам блок управления — это в разы дешевле покупки нового модуля.</p>
-          </div>
-          <div class="why__item">
-            <div class="why__icon why__icon--sm">0₽</div>
-            <h3 class="why__item-title">Бесплатная диагностика</h3>
-            <p class="why__item-text">Диагностика бесплатна, если вы заказываете ремонт у нас.</p>
-          </div>
-          <div class="why__item">
-            <div class="why__icon">✓</div>
-            <h3 class="why__item-title">Гарантия до 2 лет</h3>
-            <p class="why__item-text">Отвечаем за результат и даём гарантию на выполненные работы — до 2 лет.</p>
-          </div>
-          <div class="why__item">
-            <div class="why__icon why__icon--lg">⌂</div>
-            <h3 class="why__item-title">Выезд на дом</h3>
-            <p class="why__item-text">Выезжаем на ремонт бытовой техники по Санкт-Петербургу.</p>
-          </div>
-          <div class="why__item">
-            <div class="why__icon">⚒</div>
-            <h3 class="why__item-title">Сложные случаи</h3>
-            <p class="why__item-text">Беремся за технику, от которой отказались в других сервисах.</p>
-          </div>
-          <div class="why__item">
-            <div class="why__icon">⌖</div>
-            <h3 class="why__item-title">Удобно в Петербурге</h3>
-            <p class="why__item-text">Мастерская на ул. Зенитчиков, 3к2. Работаем ежедневно до 20:00.</p>
-          </div>
-        </div>
-      </div>
-      <div class="why__visual" data-reveal>
-        <div class="why__photo-frame">
-          <img src="assets/images/signage.jpg" alt="Вывеска Паяльной лавки" class="why__photo">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== WORKS (placeholder examples) ===== -->
-  <section class="section section--dark">
-    <div class="container">
-      <div class="section__eyebrow section__eyebrow--on-dark">Примеры работ</div>
-      <h2 class="section__title" data-reveal>Что приносят к нам в ремонт</h2>
-      <div class="works__grid" data-reveal-group>
-        <div class="works__card">
-          <div class="works__card-media"><img src="assets/images/work-miele.jpg" alt="Ремонт стиральной машины Miele" class="works__card-img"></div>
-          <div class="works__card-body">
-            <div class="works__card-eyebrow">Стиральная машина Miele</div>
-            <h3 class="works__card-title">Замена процессора на плате управления</h3>
-          </div>
-        </div>
-        <div class="works__card">
-          <div class="works__card-media"><img src="assets/images/work-smeg.jpg" alt="Ремонт стиральной машины Smeg" class="works__card-img"></div>
-          <div class="works__card-body">
-            <div class="works__card-eyebrow">Стиральная машина Smeg</div>
-            <h3 class="works__card-title">Замена подшипников и ремонт двигателя</h3>
-          </div>
-        </div>
-        <div class="works__card">
-          <div class="works__card-media"><img src="assets/images/work-teka.png" alt="Ремонт посудомоечной машины Teka" class="works__card-img"></div>
-          <div class="works__card-body">
-            <div class="works__card-eyebrow">Посудомоечная машина Teka</div>
-            <h3 class="works__card-title">Восстановление ЭБУ после скачка напряжения</h3>
-          </div>
-        </div>
-        <div class="works__card">
-          <div class="works__card-media"><img src="assets/images/work-kuppersbusch.jpg" alt="Ремонт парового шкафа Küppersbusch" class="works__card-img"></div>
-          <div class="works__card-body">
-            <div class="works__card-eyebrow">Паровой шкаф Küppersbusch</div>
-            <h3 class="works__card-title">Ремонт парового шкафа</h3>
-          </div>
-        </div>
-        <div class="works__card">
-          <div class="works__card-media"><img src="assets/images/work-siemens.png" alt="Ремонт посудомоечной машины Siemens" class="works__card-img"></div>
-          <div class="works__card-body">
-            <div class="works__card-eyebrow">Посудомоечная машина Siemens</div>
-            <h3 class="works__card-title">Замена циркуляционного насоса</h3>
-          </div>
-        </div>
-        <div class="works__card">
-          <div class="works__card-media"><img src="assets/images/work-steamer.jpg" alt="Ремонт пароварки" class="works__card-img"></div>
-          <div class="works__card-body">
-            <div class="works__card-eyebrow">Пароварка</div>
-            <h3 class="works__card-title">Замена слюды и ремонт электроцепей</h3>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== REVIEWS ===== -->
-  <section class="section">
-    <div class="container">
-      <div class="section__eyebrow">Отзывы</div>
-      <h2 class="section__title" data-reveal>Что говорят клиенты</h2>
-      <div class="reviews__grid" data-reveal-group>
-
-        <div class="reviews__card">
-          <div class="reviews__author">
-            <img src="assets/images/review-liza-avatar.png" alt="Лиза" class="reviews__avatar">
-            <div>
-              <div class="reviews__author-name">Лиза</div>
-              <div class="reviews__author-meta">Яндекс.Карты · июнь 2026</div>
+      <!-- quick facts strip -->
+      <div class="hero__facts container">
+        <div class="hero__facts-grid">
+          <div class="hero__fact">
+            <div class="hero__fact-value">Электроника</div>
+            <div class="hero__fact-label">
+              основной профиль — платы управления
             </div>
           </div>
-          <div class="reviews__stars">★★★★★</div>
-          <p class="reviews__text">«Отдала в ремонт кофемашину брата. Знала только, что она не работает, а что именно не так — не знала. Мастер всё проверил, сам всё выяснил, уточнил сроки, когда именно мне удобно её забрать. Позже звонил, объяснял что с ней не так, какие детали нужны и проговорил цену. Машинку забирала в срок, работающую да ещё и почищенную. Так что однозначно рекомендую мастеров — всё быстро, чётко, качественно и недорого!»</p>
-          <img src="assets/images/review-liza-workshop.png" alt="Паяльная лавка — мастерская" class="reviews__photo">
-          <a href="https://yandex.ru/maps/user/5u7233g0dzb1pgfhwhfrbfap48" target="_blank" rel="noopener" class="reviews__link">Профиль на Яндексе →</a>
+          <div class="hero__fact">
+            <div class="hero__fact-value">Крупная и мелкая</div>
+            <div class="hero__fact-label">вся бытовая техника</div>
+          </div>
+          <div class="hero__fact">
+            <div class="hero__fact-value">11:00–20:00</div>
+            <div class="hero__fact-label">режим работы лавки</div>
+          </div>
+          <div class="hero__fact">
+            <div class="hero__fact-value hero__fact-value--accent">
+              Зенитчиков, 3к2
+            </div>
+            <div class="hero__fact-label">мастерская в Санкт-Петербурге</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero__spacer"></div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section__eyebrow">Что мы чиним</div>
+        <h2
+          class="section__title section__title--tight services__title"
+          data-reveal
+        >
+          От платы управления до целого холодильника
+        </h2>
+
+        <!-- featured: electronics -->
+        <div class="services__featured" data-reveal>
+          <div>
+            <div class="services__featured-badge">★ Основной профиль</div>
+            <h3 class="services__featured-title">
+              Электронные блоки управления
+            </h3>
+            <p class="services__featured-text">
+              Диагностика и ремонт плат и модулей управления на компонентном
+              уровне: стиральные и посудомоечные машины, холодильники,
+              кондиционеры, кофемашины, парогенераторы и другая техника. Чиним
+              саму плату, а не меняем блок целиком — это дешевле для вас.
+            </p>
+          </div>
+          <div class="services__tags">
+            <span class="services__tag">Платы управления</span>
+            <span class="services__tag">Силовые модули</span>
+            <span class="services__tag">Микросхемы</span>
+            <span class="services__tag">Датчики и проводка</span>
+            <span class="services__tag">Дисплеи управления</span>
+          </div>
         </div>
 
-        <div class="reviews__card">
-          <div class="reviews__author">
-            <img src="assets/images/review-kirill-avatar.png" alt="Кирилл К." class="reviews__avatar">
-            <div>
-              <div class="reviews__author-name">Кирилл К.</div>
-              <div class="reviews__author-meta">Местный эксперт, ур. 4 · 3 апреля</div>
+        <!-- two categories -->
+        <div class="services__grid" data-reveal-group>
+          <div class="services__card">
+            <h3 class="services__card-title">Крупная бытовая техника</h3>
+            <div class="services__chips">
+              <span class="services__chip">Стиральные машины</span>
+              <span class="services__chip">Посудомоечные машины</span>
+              <span class="services__chip">Сушильные машины</span>
+              <span class="services__chip">Холодильники</span>
+              <span class="services__chip">Кондиционеры</span>
+              <span class="services__chip">Кофемашины</span>
+              <span class="services__chip">Парогенераторы</span>
+              <span class="services__chip">Гладильные системы</span>
+              <span class="services__chip">Откатные ворота</span>
             </div>
           </div>
-          <div class="reviews__stars">★★★★★</div>
-          <p class="reviews__text">«Обращался не раз, только положительные эмоции. Все вопросы решались оперативно, руководство помогало в решении конфликтов, смело доверяйте ребятам.»</p>
-          <img src="assets/images/review-kirill-board.png" alt="Отремонтированная плата" class="reviews__photo">
-          <a href="https://yandex.ru/maps/org/payalnaya_lavka/160423629659/reviews/" target="_blank" rel="noopener" class="reviews__link">Отзыв на Яндексе →</a>
-        </div>
-
-        <div class="reviews__card">
-          <div class="reviews__author">
-            <img src="assets/images/review-anna-avatar.png" alt="Анна Абцешко" class="reviews__avatar">
-            <div>
-              <div class="reviews__author-name">Анна Абцешко</div>
-              <div class="reviews__author-meta">Местный эксперт, ур. 3 · 24 января</div>
+          <div class="services__card">
+            <h3 class="services__card-title">Мелкая бытовая техника</h3>
+            <div class="services__chips">
+              <span class="services__chip">Чайники</span>
+              <span class="services__chip">Тостеры</span>
+              <span class="services__chip">Блендеры и миксеры</span>
+              <span class="services__chip">Микроволновки</span>
+              <span class="services__chip">Утюги</span>
+              <span class="services__chip">Фены</span>
+              <span class="services__chip">Мясорубки</span>
+              <span class="services__chip">Кухонные комбайны</span>
+              <span class="services__chip">и другое</span>
             </div>
           </div>
-          <div class="reviews__stars">★★★★★</div>
-          <p class="reviews__text">«Вызвала мастера по объявлению, стиральную машину раскурочили и доломали ещё больше. Неделю не могла вернуть плату от горе-мастера. Когда забрала плату — отнесла ребятам в Паяльную лавку, всё отремонтировали, мастер Александр сам подъехал, установил плату, заменил подшипники, провёл профилактическую чистку. Всё работает. Большое спасибо, выручили, при необходимости буду обращаться ещё.»</p>
-          <img src="assets/images/review-anna-samsung.png" alt="Стиральная машина Samsung" class="reviews__photo">
-          <a href="https://yandex.ru/maps/org/payalnaya_lavka/160423629659/reviews/" target="_blank" rel="noopener" class="reviews__link">Отзыв на Яндексе →</a>
-        </div>
-
-      </div>
-      <p class="reviews__more"><a href="https://yandex.ru/maps/org/payalnaya_lavka/160423629659/" target="_blank" rel="noopener" class="reviews__more-link">Читать все отзывы на Яндекс.Картах →</a></p>
-    </div>
-  </section>
-
-  <!-- ===== CTA BAND ===== -->
-  <section class="cta-band">
-    <div class="container cta-band__inner" data-reveal>
-      <div class="cta-band__content">
-        <h2 class="cta-band__title">Техника сломалась? Не спешите её выбрасывать</h2>
-        <p class="cta-band__text">Приносите в Паяльную лавку — посмотрим и починим.</p>
-      </div>
-      <a href="tel:+79650684874" class="cta-band__btn">+7 (965) 068-48-74</a>
-    </div>
-  </section>
-
-  <!-- ===== CONTACTS ===== -->
-  <section id="contacts" class="section">
-    <div class="container contacts__inner" data-reveal-group>
-      <div>
-        <div class="section__eyebrow">Контакты</div>
-        <h2 class="section__title section__title--tight contacts__title">Приходите или позвоните</h2>
-        <div class="contacts__list">
-          <div>
-            <div class="contacts__item-label">Адрес</div>
-            <div class="contacts__item-value">Санкт-Петербург, ул. Зенитчиков, 3к2</div>
-            <a href="https://yandex.ru/maps/org/payalnaya_lavka/160423629659/" target="_blank" rel="noopener" class="contacts__item-link">Открыть на Яндекс.Картах →</a>
-          </div>
-          <div>
-            <div class="contacts__item-label">Телефон</div>
-            <a href="tel:+79650684874" class="contacts__item-phone">+7 (965) 068-48-74</a>
-          </div>
-          <div>
-            <div class="contacts__item-label">Режим работы</div>
-            <div class="contacts__item-value">Ежедневно, 11:00–20:00</div>
-          </div>
         </div>
       </div>
-      <div class="contacts__card">
-        <form class="contact-form" id="contactForm" action="php/send.php" method="post" novalidate>
-          <h3 class="contact-form__title">Оставить заявку на ремонт</h3>
-          <div>
-            <label class="contact-form__label">Ваше имя</label>
-            <input type="text" name="name" placeholder="Иван" class="contact-form__input" required>
+    </section>
+
+    <!-- ===== PROCESS ===== -->
+    <section id="process" class="section section--alt">
+      <div class="container">
+        <div class="section__eyebrow">Как мы работаем</div>
+        <h2 class="section__title" data-reveal>Четыре простых шага</h2>
+        <div class="process__grid" data-reveal-group>
+          <div class="process__step">
+            <div class="process__step-number">01</div>
+            <h3 class="process__step-title">Приём техники</h3>
+            <p class="process__step-text">
+              Приносите технику или плату в лавку. Можно позвонить и описать
+              поломку заранее.
+            </p>
           </div>
-          <div>
-            <label class="contact-form__label">Телефон</label>
-            <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" class="contact-form__input" required>
+          <div class="process__step">
+            <div class="process__step-number">02</div>
+            <h3 class="process__step-title">Диагностика</h3>
+            <p class="process__step-text">
+              Находим причину неисправности и сообщаем стоимость и срок ремонта
+              до начала работ.
+            </p>
           </div>
-          <div>
-            <label class="contact-form__label">Что случилось с техникой?</label>
-            <textarea rows="3" name="message" placeholder="Опишите технику и поломку" class="contact-form__textarea"></textarea>
+          <div class="process__step">
+            <div class="process__step-number">03</div>
+            <h3 class="process__step-title">Ремонт</h3>
+            <p class="process__step-text">
+              Восстанавливаем плату или узел: пайка, замена компонентов,
+              проверка под нагрузкой.
+            </p>
           </div>
-          <div class="contact-form__honeypot" aria-hidden="true">
-            <label for="contactWebsite">Не заполняйте это поле</label>
-            <input type="text" id="contactWebsite" name="website" tabindex="-1" autocomplete="off">
+          <div class="process__step">
+            <div class="process__step-number">04</div>
+            <h3 class="process__step-title">Выдача и гарантия</h3>
+            <p class="process__step-text">
+              Отдаём рабочую технику и даём гарантию на выполненные работы — до
+              2 лет.
+            </p>
           </div>
-          <p class="contact-form__error is-hidden" id="contactFormError">Не удалось отправить заявку. Попробуйте ещё раз или позвоните нам напрямую.</p>
-          <button type="submit" class="contact-form__submit">Отправить заявку</button>
-        </form>
-        <div class="contact-success is-hidden" id="contactSuccess">
-          <div class="contact-success__icon">✓</div>
-          <h3 class="contact-success__title">Заявка отправлена!</h3>
-          <p class="contact-success__text">Мы свяжемся с вами в ближайшее время.</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="site-footer">
-    <div class="container site-footer__inner">
-      <div class="site-footer__brand">
-        <span class="site-footer__brand-title">ПАЯЛЬНАЯ ЛАВКА · ПИТЕР</span>
-        <span class="site-footer__brand-sub">Ремонт электроники и бытовой техники в Санкт-Петербурге</span>
+    <!-- ===== WHY US ===== -->
+    <section id="why" class="section">
+      <div class="container why__inner">
+        <div>
+          <div class="section__eyebrow">Почему выбирают лавку</div>
+          <h2
+            class="section__title section__title--tight why__title"
+            data-reveal
+          >
+            Чиним по-честному, на уровне платы
+          </h2>
+          <div class="why__grid" data-reveal-group>
+            <div class="why__item">
+              <div class="why__icon">✓</div>
+              <h3 class="why__item-title">Ремонт платы, а не замена</h3>
+              <p class="why__item-text">
+                Восстанавливаем сам блок управления — это в разы дешевле покупки
+                нового модуля.
+              </p>
+            </div>
+            <div class="why__item">
+              <div class="why__icon why__icon--sm">0₽</div>
+              <h3 class="why__item-title">Бесплатная диагностика</h3>
+              <p class="why__item-text">
+                Диагностика бесплатна, если вы заказываете ремонт у нас.
+              </p>
+            </div>
+            <div class="why__item">
+              <div class="why__icon">✓</div>
+              <h3 class="why__item-title">Гарантия до 2 лет</h3>
+              <p class="why__item-text">
+                Отвечаем за результат и даём гарантию на выполненные работы — до
+                2 лет.
+              </p>
+            </div>
+            <div class="why__item">
+              <div class="why__icon why__icon--lg">⌂</div>
+              <h3 class="why__item-title">Выезд на дом</h3>
+              <p class="why__item-text">
+                Выезжаем на ремонт бытовой техники по Санкт-Петербургу и
+                Ленинградской области.
+              </p>
+            </div>
+            <div class="why__item">
+              <div class="why__icon">⚒</div>
+              <h3 class="why__item-title">Сложные случаи</h3>
+              <p class="why__item-text">
+                Беремся за технику, от которой отказались в других сервисах.
+              </p>
+            </div>
+            <div class="why__item">
+              <div class="why__icon">⌖</div>
+              <h3 class="why__item-title">Удобно в Петербурге</h3>
+              <p class="why__item-text">
+                Мастерская на ул. Зенитчиков, 3к2. Работаем ежедневно до 20:00.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="why__visual" data-reveal>
+          <div class="why__photo-frame">
+            <img
+              src="assets/images/signage.jpg"
+              alt="Вывеска Паяльной лавки"
+              class="why__photo"
+            />
+          </div>
+        </div>
       </div>
-      <div class="site-footer__legal">
-        ИП Горбачёв Михаил Сергеевич · ИНН 422371333639<br>
-        © 2026 Паяльная лавка · +7 (965) 068-48-74
-      </div>
-    </div>
-  </footer>
+    </section>
 
-  <script src="js/script.js"></script>
-</body>
+    <!-- ===== WORKS ===== -->
+    <section class="section section--dark">
+      <div class="container">
+        <div class="section__eyebrow section__eyebrow--on-dark">
+          Примеры работ
+        </div>
+        <h2 class="section__title" data-reveal>Что приносят к нам в ремонт</h2>
+        <div class="works__grid" data-reveal-group>
+          <div class="works__card">
+            <div class="works__card-media">
+              <img
+                src="assets/images/work-siemens-board.jpg"
+                alt="Плата управления Siemens"
+                class="works__card-img"
+              />
+            </div>
+            <div class="works__card-body">
+              <div class="works__card-eyebrow">Плата управления Siemens</div>
+              <h3 class="works__card-title">
+                Восстановление модуля стиральной машины
+              </h3>
+            </div>
+          </div>
+          <div class="works__card">
+            <div class="works__card-media">
+              <img
+                src="assets/images/work-electronic-board.jpg"
+                alt="Электронная плата"
+                class="works__card-img"
+              />
+            </div>
+            <div class="works__card-body">
+              <div class="works__card-eyebrow">Электронная плата</div>
+              <h3 class="works__card-title">
+                Компонентный ремонт на уровне платы
+              </h3>
+            </div>
+          </div>
+          <div class="works__card">
+            <div class="works__card-media">
+              <img
+                src="assets/images/work-coffee-kuppersbusch.jpg"
+                alt="Кофемашина Küppersbusch"
+                class="works__card-img"
+              />
+            </div>
+            <div class="works__card-body">
+              <div class="works__card-eyebrow">Кофемашина Küppersbusch</div>
+              <h3 class="works__card-title">Ремонт встраиваемой кофемашины</h3>
+            </div>
+          </div>
+          <div class="works__card">
+            <div class="works__card-media">
+              <img
+                src="assets/images/work-coffee-teardown.jpg"
+                alt="Кофемашина в разборе"
+                class="works__card-img"
+              />
+            </div>
+            <div class="works__card-body">
+              <div class="works__card-eyebrow">Кофемашина в разборе</div>
+              <h3 class="works__card-title">
+                Ремонт заварочного узла и проводки
+              </h3>
+            </div>
+          </div>
+          <div class="works__card">
+            <div class="works__card-media">
+              <img
+                src="assets/images/work-bosch-dryer.jpg"
+                alt="Сушильная машина Bosch"
+                class="works__card-img"
+              />
+            </div>
+            <div class="works__card-body">
+              <div class="works__card-eyebrow">Сушильная машина Bosch</div>
+              <h3 class="works__card-title">
+                Диагностика и ремонт модуля сушки
+              </h3>
+            </div>
+          </div>
+          <div class="works__card">
+            <div class="works__card-media">
+              <img
+                src="assets/images/work-wine-cabinet.jpg"
+                alt="Винный шкаф"
+                class="works__card-img"
+              />
+            </div>
+            <div class="works__card-body">
+              <div class="works__card-eyebrow">Винный шкаф</div>
+              <h3 class="works__card-title">
+                Ремонт электроники и системы охлаждения
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== REVIEWS ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="section__eyebrow">Отзывы</div>
+        <h2 class="section__title" data-reveal>Что говорят клиенты</h2>
+        <div class="reviews__grid" data-reveal-group>
+          <div class="reviews__card">
+            <div class="reviews__author">
+              <img
+                src="assets/images/review-liza-avatar.png"
+                alt="Лиза"
+                class="reviews__avatar"
+              />
+              <div>
+                <div class="reviews__author-name">Лиза</div>
+                <div class="reviews__author-meta">Яндекс.Карты · июнь 2026</div>
+              </div>
+            </div>
+            <div class="reviews__stars">★★★★★</div>
+            <p class="reviews__text">
+              «Отдала в ремонт кофемашину брата. Знала только, что она не
+              работает, а что именно не так — не знала. Мастер всё проверил, сам
+              всё выяснил, уточнил сроки, когда именно мне удобно её забрать.
+              Позже звонил, объяснял что с ней не так, какие детали нужны и
+              проговорил цену. Машинку забирала в срок, работающую да ещё и
+              почищенную. Так что однозначно рекомендую мастеров — всё быстро,
+              чётко, качественно и недорого!»
+            </p>
+            <img
+              src="assets/images/review-liza-workshop.png"
+              alt="Паяльная лавка — мастерская"
+              class="reviews__photo"
+            />
+            <a
+              href="https://yandex.ru/maps/user/5u7233g0dzb1pgfhwhfrbfap48"
+              target="_blank"
+              rel="noopener"
+              class="reviews__link"
+              >Профиль на Яндексе →</a
+            >
+          </div>
+
+          <div class="reviews__card">
+            <div class="reviews__author">
+              <img
+                src="assets/images/review-kirill-avatar.png"
+                alt="Кирилл К."
+                class="reviews__avatar"
+              />
+              <div>
+                <div class="reviews__author-name">Кирилл К.</div>
+                <div class="reviews__author-meta">
+                  Местный эксперт, ур. 4 · 3 апреля
+                </div>
+              </div>
+            </div>
+            <div class="reviews__stars">★★★★★</div>
+            <p class="reviews__text">
+              «Обращался не раз, только положительные эмоции. Все вопросы
+              решались оперативно, руководство помогало в решении конфликтов,
+              смело доверяйте ребятам.»
+            </p>
+            <img
+              src="assets/images/review-kirill-board.png"
+              alt="Отремонтированная плата"
+              class="reviews__photo"
+            />
+            <a
+              href="https://yandex.ru/maps/user/3rddpqu56wwn7d9vzx1yax1rdm?ll=30.260676%2C59.872552&z=16"
+              target="_blank"
+              rel="noopener"
+              class="reviews__link"
+              >Отзыв на Яндексе →</a
+            >
+          </div>
+
+          <div class="reviews__card">
+            <div class="reviews__author">
+              <img
+                src="assets/images/review-anna-avatar.png"
+                alt="Анна Абцешко"
+                class="reviews__avatar"
+              />
+              <div>
+                <div class="reviews__author-name">Анна Абцешко</div>
+                <div class="reviews__author-meta">
+                  Местный эксперт, ур. 3 · 24 января
+                </div>
+              </div>
+            </div>
+            <div class="reviews__stars">★★★★★</div>
+            <p class="reviews__text">
+              «Вызвала мастера по объявлению, стиральную машину раскурочили и
+              доломали ещё больше. Неделю не могла вернуть плату от
+              горе-мастера. Когда забрала плату — отнесла ребятам в Паяльную
+              лавку, всё отремонтировали, мастер Александр сам подъехал,
+              установил плату, заменил подшипники, провёл профилактическую
+              чистку. Всё работает. Большое спасибо, выручили, при необходимости
+              буду обращаться ещё.»
+            </p>
+            <img
+              src="assets/images/review-anna-samsung.png"
+              alt="Стиральная машина Samsung"
+              class="reviews__photo"
+            />
+            <a
+              href="https://yandex.ru/maps/user/bev51jvyz4n9k3pvyfxr6cuv1m?ll=30.260676%2C59.872552&z=16"
+              target="_blank"
+              rel="noopener"
+              class="reviews__link"
+              >Отзыв на Яндексе →</a
+            >
+          </div>
+        </div>
+        <p class="reviews__more">
+          <a
+            href="https://yandex.ru/maps/org/payalnaya_lavka/160423629659/"
+            target="_blank"
+            rel="noopener"
+            class="reviews__more-link"
+            >Читать все отзывы на Яндекс.Картах →</a
+          >
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== CTA BAND ===== -->
+    <section class="cta-band">
+      <div class="container cta-band__inner" data-reveal>
+        <div class="cta-band__content">
+          <h2 class="cta-band__title">
+            Техника сломалась? Не спешите её выбрасывать
+          </h2>
+          <p class="cta-band__text">
+            Приносите в Паяльную лавку — посмотрим и починим.
+          </p>
+        </div>
+        <a href="tel:+79650684874" class="cta-band__btn">+7 (965) 068-48-74</a>
+      </div>
+    </section>
+
+    <!-- ===== CONTACTS ===== -->
+    <section id="contacts" class="section">
+      <div class="container contacts__inner" data-reveal-group>
+        <div>
+          <div class="section__eyebrow">Контакты</div>
+          <h2 class="section__title section__title--tight contacts__title">
+            Приходите или позвоните
+          </h2>
+          <div class="contacts__list">
+            <div>
+              <div class="contacts__item-label">Адрес</div>
+              <div class="contacts__item-value">
+                Санкт-Петербург, ул. Зенитчиков, 3к2
+              </div>
+              <a
+                href="https://yandex.ru/maps/org/payalnaya_lavka/160423629659/"
+                target="_blank"
+                rel="noopener"
+                class="contacts__item-link"
+                >Открыть на Яндекс.Картах →</a
+              >
+            </div>
+            <div>
+              <div class="contacts__item-label">Телефон</div>
+              <a href="tel:+79650684874" class="contacts__item-phone"
+                >+7 (965) 068-48-74</a
+              >
+            </div>
+            <div>
+              <div class="contacts__item-label">Режим работы</div>
+              <div class="contacts__item-value">Ежедневно, 11:00–20:00</div>
+            </div>
+          </div>
+        </div>
+        <div class="contacts__card">
+          <form
+            class="contact-form"
+            id="contactForm"
+            action="php/send.php"
+            method="post"
+            novalidate
+          >
+            <div class="contact-form__discount">
+              <span class="contact-form__discount-value">−10%</span>
+              <span class="contact-form__discount-text">
+                <strong>Скидка до 10% на ремонт</strong>
+                за заявку, оставленную через сайт
+              </span>
+            </div>
+            <h3 class="contact-form__title">Оставить заявку на ремонт</h3>
+            <div>
+              <label class="contact-form__label">Ваше имя</label>
+              <input
+                type="text"
+                name="name"
+                placeholder="Иван"
+                class="contact-form__input"
+                required
+              />
+            </div>
+            <div>
+              <label class="contact-form__label">Телефон</label>
+              <input
+                type="tel"
+                name="phone"
+                placeholder="+7 (___) ___-__-__"
+                class="contact-form__input"
+                required
+              />
+            </div>
+            <div>
+              <label class="contact-form__label"
+                >Что случилось с техникой?</label
+              >
+              <textarea
+                rows="3"
+                name="message"
+                placeholder="Опишите технику и поломку"
+                class="contact-form__textarea"
+              ></textarea>
+            </div>
+            <div class="contact-form__honeypot" aria-hidden="true">
+              <label for="contactWebsite">Не заполняйте это поле</label>
+              <input
+                type="text"
+                id="contactWebsite"
+                name="website"
+                tabindex="-1"
+                autocomplete="off"
+              />
+            </div>
+            <p class="contact-form__error is-hidden" id="contactFormError">
+              Не удалось отправить заявку. Попробуйте ещё раз или позвоните нам
+              напрямую.
+            </p>
+            <button type="submit" class="contact-form__submit">
+              Отправить заявку
+            </button>
+          </form>
+          <div class="contact-success is-hidden" id="contactSuccess">
+            <div class="contact-success__icon">✓</div>
+            <h3 class="contact-success__title">Заявка отправлена!</h3>
+            <p class="contact-success__text">
+              Мы свяжемся с вами в ближайшее время.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div class="site-footer__brand">
+          <span class="site-footer__brand-title">ПАЯЛЬНАЯ ЛАВКА · ПИТЕР</span>
+          <span class="site-footer__brand-sub"
+            >Ремонт электроники и бытовой техники в Санкт-Петербурге</span
+          >
+        </div>
+        <div class="site-footer__legal">
+          ИП Горбачёв Михаил Сергеевич · ИНН 422371333639<br />
+          © 2026 Паяльная лавка · +7 (965) 068-48-74
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
 </html>

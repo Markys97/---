@@ -1269,6 +1269,38 @@ body { margin: 0; }
   margin: 0 0 4px;
 }
 
+.contact-form__discount {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 12px;
+  padding: 16px 20px;
+}
+
+.contact-form__discount-value {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.contact-form__discount-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  line-height: 1.4;
+  opacity: 0.92;
+}
+
+.contact-form__discount-text strong {
+  font-size: 15px;
+  font-weight: 700;
+  opacity: 1;
+}
+
 .contact-form__label {
   display: block;
   font-size: 13px;
